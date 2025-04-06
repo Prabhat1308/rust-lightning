@@ -36,7 +36,7 @@ cc = "1.0"
 members = ["."]
 
 [profile.release]
-lto = true
+
 codegen-units = 1
 debug-assertions = true
 overflow-checks = true
