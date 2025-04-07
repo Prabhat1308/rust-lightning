@@ -54,6 +54,7 @@ for TARGET_PATH in src/bin/*_target.rs; do
     TARGET_CORPUS_DIR="$CORPUS_DIR/$TARGET_NAME"
 
     echo "Running fuzzer for target: $TARGET_NAME using corpus $TARGET_CORPUS_DIR"
+    mkdir -p "$TARGET_CORPUS_DIR" # Ensure the corpus directory exists
 
     # Set time limit for each fuzzer run (e.g., 60 seconds)
     # Adjust MAX_TOTAL_TIME as needed. cargo fuzz passes arguments after '--' to libFuzzer.
