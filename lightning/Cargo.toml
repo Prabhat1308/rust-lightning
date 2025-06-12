@@ -54,6 +54,8 @@ regex = "1.5.6"
 lightning-types = { version = "0.3.0", path = "../lightning-types", features = ["_test_utils"] }
 lightning-macros = { path = "../lightning-macros" }
 parking_lot = { version = "0.12", default-features = false }
+criterion = { version = "0.5.1", features = ["html_reports"] }
+tempfile = "3.8"
 
 [dev-dependencies.bitcoin]
 version = "0.32.2"
@@ -68,3 +70,7 @@ musig2 = { git = "https://github.com/arik-so/rust-musig2", rev = "6f95a05718cbb4
 
 [lints]
 workspace = true
+
+[[bench]]
+name = "monitor_updating_persister"
+harness = false
